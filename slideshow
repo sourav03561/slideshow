@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>nasa</title>
+	<style type="text/css">
+		.slideshow{
+			width: 80%;
+			height: 700px;
+			margin: auto;
+			margin-right:  -44px;
+
+		}
+		hr{
+			width: 60%;
+			color: #4611ac;
+			margin-left: 5px; 
+		}
+		h1{
+			background-color:   #4611ac;
+			color: white;
+			width: 65%;
+		}
+
+	</style>
+</head>
+<body>
+	<script>
+		var time =2000;
+		var images = [ "sourav11.jpg",
+		               "sourav2.jpg",
+		               "sourav3.jpg",
+		               "sourav4.jpg",
+		               "sourav5.jpg",
+		               "sourav6.jpg",
+		               "sourav7.jpg",
+		               "sourav8.jpg",
+		               "sourav9.jpg",
+		               "sourav10.jpg",	];
+		var i = 0;
+	function changeImg(){
+		document.slide.src =images[i];
+
+		if(i < images.length - 1){
+			i++;
+		} else {
+			i = 0;
+		}
+
+		setTimeout("changeImg()", time);
+	}
+
+	window.onload = changeImg;
+
+	</script>
+<div class="slideshow">
+	<h1>Here you see univers image</h1>
+	<hr>
+	<img  name="slide" width="700" height="400">
+	
+</div>
+</body>
+</html>
